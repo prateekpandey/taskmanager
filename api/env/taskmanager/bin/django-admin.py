@@ -1,4 +1,4 @@
-#!/Users/prateek/PycharmProjects/envs/taskmanager/bin/python3.6
+#!/Users/prateek/taskmanager/api/env/taskmanager/bin/python3.4
 from django.core import management
 
 if __name__ == "__main__":

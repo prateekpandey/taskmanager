@@ -38,25 +38,30 @@ INSTALLED_APPS = [
 	'django.contrib.auth',
     'django.contrib.contenttypes',
 	'django.contrib.sessions',
-
 	# todo check for usage
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+
 	'corsheaders',
 	'rest_framework',
+
 	'auth.apps.AuthConfig',
 	'user.apps.UserConfig',
     'task.apps.TaskConfig',
+	'rest_framework_swagger',
+
 ]
 
 MIDDLEWARE = [
 	'django.contrib.sessions.middleware.SessionMiddleware',
-	'corsheaders.middleware.CorsMiddleware',
 	'django.middleware.common.CommonMiddleware',
 	'django.middleware.csrf.CsrfViewMiddleware',
 	'django.contrib.auth.middleware.AuthenticationMiddleware',
 	'django.contrib.messages.middleware.MessageMiddleware',
 	'django.middleware.clickjacking.XFrameOptionsMiddleware',
+	'corsheaders.middleware.CorsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'taskmanager.urls'
@@ -129,3 +134,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+SWAGGER_SETTINGS = {
+	'api_version': '1.0',
+	# 'api_path': '/dev/api/app',
+	# 'api_key': 'c805c38d3f1fc19ce036637c8d1f3a6495e74bb6',
+	'info': {
+		'title': 'DTR',
+		'description': 'DateTheRamp REST API for customer side App.'
+	}
+}
