@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import LoginPage from './Login';
 import RegistrationPage  from './Register';
-import taskList from './taskList';
+import TaskList from './TaskList';
 import { HashRouter,Route,IndexRoute } from 'react-router-dom';
 
 ReactDOM.render((
@@ -10,7 +10,7 @@ ReactDOM.render((
         <div>
             <Route exact path="/" component={LoginPage} />
             <Route path="/Register" component={RegistrationPage} />
-            <Route path="/taskListing" component={taskList} />
+            <Route path="/taskListing" component={TaskList} />
         </div>
     </HashRouter >
 ), document.getElementById( 'root' ) );

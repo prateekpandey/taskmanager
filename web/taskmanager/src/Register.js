@@ -30,7 +30,7 @@ class RegistrationForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state.email,this.state.password);
-        if(this.state.InputPassword1 == this.state.InputPassword2){
+        if(this.state.InputPassword1 === this.state.InputPassword2){
             let post_data = {
                 first_name: this.state.FirstName,
                 last_name: this.state.LastName,

@@ -18,8 +18,8 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^docs/', include('rest_framework_swagger.urls')),
-#
+
     url(r'^tasks/', include('task.urls')),
-    # url(r'^users/', include('user.urls')),
+    url(r'^users/', include('user.urls')),
     url('admin/', admin.site.urls),
 ]

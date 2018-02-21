@@ -19,8 +19,12 @@ class TaskDetailView(AuthenticatedViewMixin, generics.RetrieveUpdateDestroyAPIVi
 	queryset = Task.objects.all()
 	authentication_classes = (TokenAuthentication, )
 
+	def get_object(self):
+		obj = super().get_object()
+		return obj
+
 	def get(self, request, *args, **kwargs):
-		return super().get(request, *args, **kwargs)
+		return super().get(request, *args)
 
 
 class MyTaskView(TaskView):

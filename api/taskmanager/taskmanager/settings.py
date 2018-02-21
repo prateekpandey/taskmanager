@@ -54,13 +54,13 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-	'django.contrib.sessions.middleware.SessionMiddleware',
+	'corsheaders.middleware.CorsMiddleware',
 	'django.middleware.common.CommonMiddleware',
 	'django.middleware.csrf.CsrfViewMiddleware',
+	'django.contrib.sessions.middleware.SessionMiddleware',
 	'django.contrib.auth.middleware.AuthenticationMiddleware',
 	'django.contrib.messages.middleware.MessageMiddleware',
 	'django.middleware.clickjacking.XFrameOptionsMiddleware',
-	'corsheaders.middleware.CorsMiddleware',
 
 ]
 
@@ -134,12 +134,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-SWAGGER_SETTINGS = {
-	'api_version': '1.0',
-	# 'api_path': '/dev/api/app',
-	# 'api_key': 'c805c38d3f1fc19ce036637c8d1f3a6495e74bb6',
-	'info': {
-		'title': 'DTR',
-		'description': 'DateTheRamp REST API for customer side App.'
-	}
-}
+# SWAGGER_SETTINGS = {
+# 	'api_version': '1.0',
+# 	# 'api_path': '/dev/api/app',
+# 	# 'api_key': 'c805c38d3f1fc19ce036637c8d1f3a6495e74bb6',
+# 	'info': {
+# 		'title': 'DTR',
+# 		'description': 'DateTheRamp REST API for customer side App.'
+# 	}
+# }

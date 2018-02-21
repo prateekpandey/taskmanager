@@ -32,7 +32,7 @@ class LoginView(generics.CreateAPIView):
 	def create(self, request, *args, **kwargs):
 		serializer = self.get_serializer(data=request.data)
 		serializer.is_valid(raise_exception=True)
-		user = authenticate(request, username=serializer.validated_data['email'], password=serializer.validated_data['password'])
+		user = authenticate(username=serializer.validated_data['email'], password=serializer.validated_data['password'])
 		if user is None:
 			raise ValidationError(detail="Email or Password is Incorrect")
 
